@@ -17,12 +17,14 @@ jobs:
         with:
           go-version: "1.21.6"
 
-      - name: Stop Service
-        run: sudo systemctl stop clon-repositorio.service
-
       - name: Build
-        run: go build -o /home/prometheus/repositorio-demon/HelloWord/repositorio-demon -v
-        working-directory: /home/prometheus/repositorio-demon/HelloWord
+        run: |
+          cd /home/prometheus/repositorio-demon/HelloWord
+          go build -o repositorio-demon -v
+
+      - name: Stop Service
+        run: |
+          sudo systemctl stop clon-repositorio.service || true  # Agrega '|| true' para evitar que el script falle si el servicio no está en ejecución
 
       - name: Start Service
         run: sudo systemctl start clon-repositorio.service
