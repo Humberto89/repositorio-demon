@@ -21,7 +21,7 @@ jobs:
         run: sudo systemctl stop clon-repositorio.service
 
       - name: Build
-        run: go build -o /home/prometheus/repositorio-demon/HelloWord/my_binary -v
+        run: go build -o /home/prometheus/repositorio-demon/HelloWord/repositorio-demon -v
         working-directory: /home/prometheus/repositorio-demon/HelloWord
 
       - name: Start Service
