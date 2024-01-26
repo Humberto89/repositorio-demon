@@ -23,8 +23,4 @@ jobs:
       - name: Build
         run: go build -o clon-repositorio -v
 
-      - name: Stop Service
-        run: sudo systemctl stop clon-repositorio
 
-      - name: Start Service
-        run: sudo systemctl start clon-repositorio
