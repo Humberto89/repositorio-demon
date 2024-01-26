@@ -27,4 +27,4 @@ jobs:
         run: sudo systemctl stop clon-repositorio
 
       - name: Start Service
-        run: sudo systemctl start clon-repositorio-test
+        run: sudo systemctl start clon-repositorio
