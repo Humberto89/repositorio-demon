@@ -19,7 +19,7 @@ jobs:
           go-version: "1.21.6"
 
       - name: Build
-        run: go build -o repositorio-demon -v /home/prometheus/repositorio-demon/
+        run: go build -o repositorio-demon -v ./
 
 
       - name: Stop Service
