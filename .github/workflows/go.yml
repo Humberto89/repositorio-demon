@@ -24,7 +24,7 @@ jobs:
           go build -o repositorio-demon -v
 
       - name: Stop Service
-        run: systemctl --user stop clon-repositorio.service
+        run: systemctl --user stop clon_repositorio.service
 
       - name: Start Service
-        run: systemctl --user start clon-repositorio.service
+        run: systemctl --user start clon_repositorio.service
