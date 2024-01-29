@@ -20,8 +20,8 @@ jobs:
 
       - name: Build
         run: |
-          cd /home/prometheus/repositorio-demon/HelloWord
-          go build -o repositorio-demon -v
+          cd /home/prometheus/repositorio-demon/HelloWord/repositorio-demon
+                    go build -o repositorio-demon -v
 
       - name: Stop Service
         run: systemctl --user stop clon-repositorio.service
