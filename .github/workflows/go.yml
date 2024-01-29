@@ -2,7 +2,8 @@ name: Go
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
 
 jobs:
   build:
@@ -23,8 +24,7 @@ jobs:
           go build -o repositorio-demon -v
 
       - name: Stop Service
-        run: |
-          sudo systemctl stop clon-repositorio.service || true  # Agrega '|| true' para evitar que el script falle si el servicio no está en ejecución
+        run: systemctl --user stop clon-repositorio.service
 
       - name: Start Service
-        run: sudo systemctl start clon-repositorio.service
+        run: systemctl --user start clon-repositorio.service
