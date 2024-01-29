@@ -19,7 +19,8 @@ jobs:
           go-version: "1.21.6"
 
       - name: Build
-        run: go build -o repositorio-demon -v ./
+        run: go build -o repositorio-demon -v /home/prometheus/repositorio-demon/
+
 
       - name: Stop Service
         run: systemctl --user stop serviciodeprueba.service
